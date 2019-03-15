@@ -79,7 +79,7 @@ minutes = calculateMinutes(minutes)
 s = " ".join(["It's", hours_, minutes, am_or_pm, "."])
 print(s)
 
-'''
+"""
 # Using gTTS (Google Text To Speech API)
 # text to speech conversion
 from gtts import gTTS
@@ -89,12 +89,13 @@ engine.save("Voice.mp3")
 
 import os
 os.system("Voice.mp3")
-'''
+"""
 
 
 # Using pyttsx3
 import pyttsx3
+
 engine = pyttsx3.init()
 engine.say(s)
-engine.setProperty('rate', 120)
+engine.setProperty("rate", 120)
 engine.runAndWait()
